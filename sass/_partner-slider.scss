@@ -1,0 +1,26 @@
+/*partner-slider*/ 
+.partner-slider{
+	height: 50vh;
+	margin-top: 5em;
+	.slick-list{
+		border-left: 1px solid var(--border-color);
+	}
+}
+.partner-slider__item{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 8em;
+	border-bottom: 1px solid var(--border-color);
+	border-right: 1px solid var(--border-color);
+	img{
+		filter: brightness(0.5);
+		height: 3.75em;
+		transition: filter .3s;
+	}
+	&:hover{
+		img{
+			filter: brightness(.1);
+		}
+	}
+}

@@ -1,0 +1,57 @@
+/*about*/ 
+.video-bg{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	video{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.about-list{
+	font-size: 1rem;
+	font-family: var(--roboto);
+	margin-top: 5em;
+	li{
+		margin-right: 7.5em;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		&::before{
+			content: '';
+			width: 10em;
+			height: 10em;
+			background:transparent url('../img/ellipse.png') left top no-repeat;
+			background-size: contain;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-55%, -50%);
+			opacity: 0;
+			transition: all .3s;
+		}
+		&:hover,
+		&.active{
+			&::before{
+				opacity: 1;
+			}
+		}
+		.number{
+			font-size: 3em;
+			font-weight: 900;
+			margin-bottom: 10px;
+		}
+		.text{
+			font-size: 1.125em;
+			font-weight: 300;
+		}
+		small{
+			font-size: .5em;
+			font-weight: 300;
+		}
+	}
+}
