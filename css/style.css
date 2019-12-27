@@ -800,6 +800,10 @@ b, strong {
 
 /*section*/
 .fp-viewing-first .header,
+.fp-viewing-first .footer {
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.fp-viewing-first .header,
 .fp-viewing-three .header {
   color: #fff;
   border-bottom-color: var(--border-color-light); }
