@@ -44,10 +44,14 @@
 			font-size: 3em;
 			font-weight: 900;
 			margin-bottom: 10px;
+			position: relative;
+			z-index: 2;
 		}
 		.text{
 			font-size: 1.125em;
 			font-weight: 300;
+			position: relative;
+			z-index: 2;
 		}
 		small{
 			font-size: .5em;

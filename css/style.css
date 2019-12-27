@@ -1358,6 +1358,10 @@ a.product-item__photo:hover {
 .contact-block {
   height: 45vh; }
 
+.contact-item:not(:last-child) {
+  margin-bottom: 1em;
+  padding-bottom: 1em; }
+
 .dott {
   width: 7px;
   height: 7px;
@@ -1372,7 +1376,7 @@ a.product-item__photo:hover {
   line-height: 2; }
   .contact-data .h3 {
     font-weight: 500;
-    margin-bottom: 1em; }
+    margin-bottom: .5em; }
 
 .contact-form {
   width: 55%;
@@ -1501,10 +1505,14 @@ textarea.input {
     .about-list li .number {
       font-size: 3em;
       font-weight: 900;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 2; }
     .about-list li .text {
       font-size: 1.125em;
-      font-weight: 300; }
+      font-weight: 300;
+      position: relative;
+      z-index: 2; }
     .about-list li small {
       font-size: .5em;
       font-weight: 300; }
