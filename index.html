@@ -60,7 +60,8 @@
 
 			<section class="screen screen--first vertical-scrolling">
 				<div class="video-bg">
-					<video src="img/video-main.mp4" muted loop autoplay data-autoplay data-keepplaying></video>
+					<!-- <video src="img/video-main.mp4" muted loop autoplay data-autoplay data-keepplaying></video> -->
+					<img src="img/bg/bg-1.jpg" alt="">
 				</div>
 				<div class="container h-100">
 					<div class="main-slider-container white h-100">
@@ -862,15 +863,13 @@
 		<footer class="footer">
 
 			<div class="container flex">
-				<div class="footer__item flex flex--center">
-					<a href="mailto:info@rit.ru" class="address flex flex--center">
-						<span class="ico ico--mr ico--blue">
+				<div class="footer__item footer__item--nav flex justify-center" data-menuanchor="six">
+					<a href="#six" class="nav-btn flex flex--center">
+						<span class="text">Новости</span>
+						<span class="ico ico--ml">
 							<svg>
-								<use xlink:href="#svg-envelope"></use>
+								<use xlink:href="#svg-burger"></use>
 							</svg>
-						</span>
-						<span class="text">
-							info@rit.ru
 						</span>
 					</a>
 				</div>
@@ -982,20 +981,30 @@
 <script src="js/common.js"></script>
 
 <script>
+	$('.scroll-fake-btn').on('click',function () {
+
+  	$(this).trigger('scroll');
+  });
 		 // fullpage customization
   if($(window).width() > 1360){
     $('#fullpage').fullpage({
       sectionSelector: '.vertical-scrolling',
-      navigation: false,
+      navigation: true,
       scrolloverflow: true,
       slidesNavigation: false,
       anchors: ['first', 'second', 'three', 'four', 'five', 'six', 'seven', 'eight'],
-  	  menu: '.menu-nav',
+  	  menu: '.menu-nav, .menu-fake',
       css3: true,
       controlArrows: false,
       responsiveWidth: 1280,
+      afterLoad: function () {
+      	$('#fp-nav li').addClass('hidden');
+      	$('#fp-nav li .active').closest('li').next('li').removeClass('hidden');
+      }
     });
   }
+
+  
 </script>
 </body>
 </html>

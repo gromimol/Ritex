@@ -1,4 +1,12 @@
 /*media*/ 
+@media(max-width: 1600px){
+	.features-text{
+		height: 32em;
+	}
+	.ritex-text{
+		height: 24em;
+	}
+}
 @media(max-width: 1460px){
 	html{
 		font-size: .9vw;
